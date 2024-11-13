@@ -1,0 +1,23 @@
+.MessageBox {
+    display: flex;
+    flex-direction: column;
+    margin: 5% 15%;
+}
+
+.MessageBox .message {
+    font-size: 20pt;
+    margin-bottom: 15px;
+}
+
+.MessageBox button {
+    height: 30px;
+    width: auto;
+    border-radius: 10px;
+    font-size: 14pt;
+    background-color: #a04000;
+    border-style: none;
+}
+
+.MessageBox button:hover {
+    background-color: #6e2c00;
+}

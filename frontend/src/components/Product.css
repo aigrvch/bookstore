@@ -1,0 +1,36 @@
+.Product {
+    width: 250px;
+    height: 450px;
+    padding: 30px;
+    box-shadow: 0px 0px 5px 5px #dfdddf;
+    margin: auto;
+}
+
+.Product img {
+    height: 250px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.Product h1 {
+    font-size: 20pt;
+    margin-bottom: 10px;
+}
+
+.Product p {
+    font-size: 14pt;
+    margin-bottom: 10px;
+}
+
+.Product .buy {
+    height: 50px;
+    width: 200px;
+    border-style: none;
+    background-color: #a04000;
+    border-radius: 10px;
+    font-size: 16pt;
+}
+
+.Product .buy:hover {
+    background-color: #6e2c00;
+}

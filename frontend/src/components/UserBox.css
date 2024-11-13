@@ -1,0 +1,35 @@
+.UserBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.UserBox p {
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #ffffff;
+}
+
+.UserBox button {
+    width: 150px;
+    height: 40px;
+    margin: 5px;
+    background-color: #a04000;
+    border-radius: 10px;
+    border-style: none;
+}
+
+.UserBox button:hover {
+    background-color: #6e2c00;
+}
+
+@media (max-width: 426px) {
+    .UserBox {
+        flex-direction: column;
+    }
+
+    .UserBox p {
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+}

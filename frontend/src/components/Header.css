@@ -1,0 +1,38 @@
+.Header {
+    width: 100%;
+    height: 50px;
+    background-color: #a04000;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Header ul {
+    display: flex;
+}
+
+.Header li {
+    list-style: none;
+    width: 140px;
+    height: 100%;
+    line-height: 50px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.Header li:hover {
+    background-color: #6e2c00;
+}
+
+@media (max-width: 426px) {
+
+    .Header ul,
+    .Header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Header {
+        height: 250px;
+    }
+}
