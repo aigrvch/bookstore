@@ -1,34 +1,16 @@
-const PORT = 9001
-const URLDB = 'mongodb://127.0.0.1:27017/'
-
 import express from 'express'
 import cors from 'cors'
 import jsonwebtoken from 'jsonwebtoken';
 import mongoose from 'mongoose'
-import { secret } from './config.js'
+
 import User from './models/User.js'
 import Product from './models/Product.js'
+
+import { port, secret, mongo } from './config.js'
 
 const app = express()
 app.use(cors())
 app.use(express.json())
-
-const generateAccessToken = (id, login, email) => {
-    const payload = {
-        id, login, email
-    }
-
-    return jsonwebtoken.sign(payload, secret, { expiresIn: '24h' })
-}
-
-const start = async () => {
-    try {
-        await mongoose.connect(URLDB)
-        app.listen(PORT, () => console.log(`Сервер работает на порту ${PORT}`))
-    } catch (e) {
-        console.error(e)
-    }
-}
 
 app.post('/registration', async (req, res) => {
     console.log(req.body)
@@ -83,10 +65,16 @@ app.post('/login', async (req, res) => {
     if (!user) {
         return res.status(400).json({ message: 'Пользователь отсутствует в базе.' })
     }
+    
     if (user.password !== password) {
         return res.status(400).json({ message: 'Неверный логин или пароль!' })
     }
-    const jwtToken = generateAccessToken(user._id, user.login, user.email)
+
+    const jwtToken = jsonwebtoken.sign({
+        id: user.id, 
+        login: user.login,
+        email: user.email
+    }, secret, { expiresIn: '24h' })
 
     res.json({
         message: 'Вы успешно вошли на сайт!',
@@ -209,9 +197,12 @@ app.post('/products/add', async (req, res) => {
     })
 })
 
-app.use((err, req, res, next) => {
-    console.error(err.stack)
-    res.status(500).send('Something broke!')
-})
-
-start()
+try {
+    await mongoose.connect(mongo.url, {
+        user: mongo.user,
+        pass: mongo.pass
+    })
+    app.listen(port, () => console.log(`Сервер работает на порту ${port}`))
+} catch (e) {
+    console.error(e)
+}

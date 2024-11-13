@@ -1,6 +1,6 @@
 .Cabinet {
     width: 100%;
-    min-height: calc(100vh - 50px - 50px);
+    height: calc(100vh - 100px);
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -29,10 +29,10 @@
     margin-bottom: 10px;
     border-radius: 10px;
     font-size: 14pt;
-    background-color: #a04000;
+    background-color: #c436c7;
     border-style: none;
 }
 
 .Cabinet button:hover {
-    background-color: #6e2c00;
+    background-color: #8c148f;
 }

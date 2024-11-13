@@ -20,12 +20,12 @@
     width: auto;
     border-radius: 10px;
     font-size: 14pt;
-    background-color: #a04000;
+    background-color: #c436c7;
     border-style: none;
 }
 
 .Login button:hover {
-    background-color: #6e2c00;
+    background-color: #8c148f;
 }
 
 .Login #loginError {

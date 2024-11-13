@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 .UserBox p {
@@ -14,13 +16,13 @@
     width: 150px;
     height: 40px;
     margin: 5px;
-    background-color: #a04000;
+    background-color: #c436c7;
     border-radius: 10px;
     border-style: none;
 }
 
 .UserBox button:hover {
-    background-color: #6e2c00;
+    background-color: #8c148f;
 }
 
 @media (max-width: 426px) {

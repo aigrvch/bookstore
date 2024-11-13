@@ -26,13 +26,13 @@
     height: 50px;
     width: 200px;
     border-style: none;
-    background-color: #a04000;
+    background-color: #c436c7;
     border-radius: 10px;
     font-size: 16pt;
 }
 
 .ProductBasket .del:hover {
-    background-color: #6e2c00;
+    background-color: #8c148f;
 }
 
 .ProductBasket .basketQty {
@@ -47,11 +47,11 @@
 .ProductBasket .basketQty button {
     width: 30px;
     border-style: none;
-    background-color: #a04000;
+    background-color: #c436c7;
     border-radius: 10px;
     font-size: 16pt;
 }
 
 .ProductBasket .basketQty button:hover {
-    background-color: #6e2c00;
+    background-color: #8c148f;
 }

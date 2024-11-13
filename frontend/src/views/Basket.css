@@ -1,6 +1,6 @@
 .Basket {
     width: 100%;
-    min-height: calc(100vh - 50px - 50px);
+    height: calc(100vh - 100px);
     background-color: #ffffff;
     padding-top: 30px;
 }
@@ -23,7 +23,7 @@
 }
 
 .Basket .order:hover {
-    background-color: #6e2c00;
+    background-color: #8c148f;
 }
 
 @media (max-width: 768px) {
